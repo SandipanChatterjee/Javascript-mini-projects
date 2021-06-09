@@ -1,0 +1,108 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.master {
+  min-width: 100px;
+  padding: 50px 15%;
+  text-align: center;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tab-link-container {
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid #b0c4de;
+  margin-bottom: 1rem;
+}
+
+.tab-link-container button {
+  background-color: inherit;
+  /* float: left; */
+  border: none;
+  /* outline: none; */
+  cursor: pointer;
+  padding: 0.3rem 10rem;
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+.tab-link-container button:hover {
+  background-color: #ddd;
+}
+.tab-link-container button.active {
+  background-color: #ccc;
+}
+
+.input-box-container {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+.input-box-container input {
+  /* float: left;  */
+  width: 85%;
+  padding: 1rem 0.2rem;
+  border-radius: 12px;
+  border: 1px solid #b0c4de;
+}
+
+.input-box-container button {
+  width: 10%;
+  padding: 1rem 0.2rem;
+  border-radius: 12px;
+  border: 1px solid #1e90ff;
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+.tab-content-container {
+  width: 100%;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.tab-content-container .tabcontent {
+  margin: 1rem 0;
+}
+
+.tab-content-container .tabcontent ul {
+  text-align: left;
+}
+
+.tab-content-container .tabcontent ul li {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.del-container:hover {
+  cursor: pointer;
+}
+
+.tab-content-container .tabcontent ul li div span {
+  /* border: 1px solid #000000; */
+  white-space: pre-wrap;
+  width: 100px;
+  overflow: hidden;
+  margin-left: 0.5rem;
+}
