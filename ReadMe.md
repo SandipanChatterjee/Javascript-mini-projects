@@ -1,3 +1,1 @@
-Mini Javascript projects
-
-Carusal in progress
+Mini Javascript projects build with Js,html,css
