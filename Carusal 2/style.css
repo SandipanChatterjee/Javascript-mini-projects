@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.container .image {
+  position: absolute;
+  border-radius: 5px;
+}
+
+.container button {
+  width: 30px;
+  height: 25px;
+  background-color: #fff;
+  outline: none;
+  border: 1px solid #303030;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #303030;
+  color: #fff;
+}
