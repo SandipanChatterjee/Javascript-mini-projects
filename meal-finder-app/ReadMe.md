@@ -1,1 +1,1 @@
-Meal-finder-app using js,html,css
+Meal-finder-app using js,html,css.
