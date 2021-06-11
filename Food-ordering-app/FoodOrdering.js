@@ -1,6 +1,7 @@
 let foodArr = [];
 
 const container = document.getElementById("container");
+const input = document.getElementById("input");
 
 let favFoodArr = [];
 
@@ -61,20 +62,15 @@ const displayList = (fdArr) => {
 };
 
 const inputHandler = () => {
-  const filterFoodArr = [];
-  const input = document.getElementById("input");
-  input.addEventListener("keyup", function (e) {
-    const str = this.value;
-    for (let food of foodArr) {
-      console.log(food);
-      if (food.name.includes(e.target.value)) {
-        filterFoodArr.push(food);
-      }
+  const inputVal = input.value.toUpperCase();
+  const foods = document.getElementsByTagName("strong");
+  for (let food of foods) {
+    if (food.innerHTML.toUpperCase().includes(inputVal)) {
+      food.parentElement.parentElement.style.display = "block";
+    } else {
+      food.parentElement.parentElement.style.display = "none";
     }
-    container.innerHTML = "";
-    displayList(filterFoodArr);
-    filterFoodArr.length = 0;
-  });
+  }
 };
 
 const tags = document.getElementById("tag");
@@ -92,7 +88,6 @@ const sortFn = () => {
       }
     });
     console.log("foodArr", foodArr);
-    inputHandler();
     displayList(foodArr);
   });
 };
@@ -105,5 +100,4 @@ const fetchFood = async () => {
 };
 
 fetchFood();
-inputHandler();
 sortFn();
