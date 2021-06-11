@@ -25,6 +25,30 @@ const searchHandler = () => {
     }
   }
 };
+
+const sortAsc = () => {
+  myTable.innerHTML = "";
+  users.sort((a, b) => {
+    let fa = a.name.toLowerCase(),
+      fb = b.name.toLowerCase();
+    if (fa < fb) return -1;
+    else if (fa > fb) return 1;
+    return 0;
+  });
+  displayList(users);
+};
+
+const sortDesc = () => {
+  myTable.innerHTML = "";
+  users.sort((a, b) => {
+    let fa = a.name.toLowerCase(),
+      fb = b.name.toLowerCase();
+    if (fa < fb) return 1;
+    else if (fa > fb) return -1;
+    return 0;
+  });
+  displayList(users);
+};
 const fetchData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await res.json();
@@ -33,17 +57,3 @@ const fetchData = async () => {
 };
 
 fetchData();
-
-/*
-    const input = document.getElementById("myInput");
-    const filteredUsers = [];
-    input.addEventListener("keyup", function () {
-        const str = this.value;
-        for (let user of users) {
-            if (user.name.includes(str)) {
-                filteredUsers.push(user);
-            }
-        }
-        displayList(filteredUsers);
-    });
-*/
