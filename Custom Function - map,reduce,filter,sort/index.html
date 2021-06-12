@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        HOF
+        const f = () => console.log("func");
+        const f1 = (x) => x();
+        f1(f);
+      */
+      const arr = [1, 2, 3, 4, 5];
+
+      Array.prototype.newMap = function (callback) {
+        const res = [];
+        // console.log(this);
+        for (let i = 0; i < this.length; i++) {
+          if (this.includes(this[i])) {
+            res[i] = callback(this[i], i, this);
+          }
+        }
+        return res;
+      };
+      const double = arr.newMap((el, ind) => el * 2);
+      //   console.log(double);
+
+      /* Custom filter function */
+      Array.prototype.newFilter = function (callback, val) {
+        const res = [];
+        // console.log("callback#", callback);
+        for (let i = 0; i < this.length; i++) {
+          if (callback.call(val, this[i], i, this)) {
+            res.push(this[i]);
+          }
+        }
+        return res;
+      };
+      const filteredArr1 = arr.newFilter((el, ind) => el > 2);
+      //   console.log(filteredArr1);
+
+      /* Custom reduce function */
+      Array.prototype.newReduce = function (callback, startingValue) {
+        console.log("callback#", callback, this);
+        let acc = startingValue || undefined;
+        for (let i = 0; i < this.length; i++) {
+          if (acc) acc = callback.call(acc, acc, this[i], i, this);
+          else acc = this[i];
+        }
+        return acc;
+      };
+      const sum = arr.newReduce((a, b) => {
+        return a + b;
+      });
+      console.log(sum);
+    </script>
+  </body>
+</html>
