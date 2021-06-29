@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#master {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
+  min-height: 800px;
+}
+
+#master #left-side {
+  background-color: #162943;
+  color: #fff;
+  width: 20%;
+}
+#master #left-side p {
+  padding: 1rem;
+  background-color: lightblue;
+  margin: 1rem;
+}
+
+#master #left-side p:hover {
+  cursor: pointer;
+}
+
+#master #left-side :first-child span {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  border-radius: 50%;
+  color: #000;
+  font-size: 15px;
+}
+#master #container {
+  width: 30%;
+  /* padding-right: 5%; */
+}
+
+#master #container #input {
+  width: 95%;
+  padding: 0.5rem 0.2rem;
+}
+
+#master #message-body {
+  width: 50%;
+}
+
+.inbox-elements {
+  background-color: #f7f6f9;
+  margin: 1rem 0;
+}
+
+.active {
+  background-color: #fff;
+}
+
+.inbox-elements:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#dsc {
+  display: none;
+}
+
+#dsc,
+#asc:hover {
+  cursor: pointer;
+}

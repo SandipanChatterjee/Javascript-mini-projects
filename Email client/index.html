@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="master">
+      <div id="left-side">
+        <p>Inbox <span id="totalElements"></span></p>
+        <p>Faourites</p>
+      </div>
+      <div id="container">
+        <div>
+          <input id="input" type="text" placeholder="Search" />
+          <i
+            id="asc"
+            class="fa fa-sort-alpha-asc"
+            aria-hidden="true"
+            onclick="sortAsc()"
+          ></i>
+          <i
+            id="dsc"
+            class="fa fa-sort-alpha-desc"
+            aria-hidden="true"
+            onclick="sortDsc()"
+          ></i>
+        </div>
+        <div id="inbox"></div>
+      </div>
+      <div id="message-body"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
