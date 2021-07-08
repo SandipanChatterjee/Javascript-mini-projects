@@ -14,8 +14,10 @@
   <body>
     <div id="master">
       <div id="left-side">
-        <p>Inbox <span id="totalElements"></span></p>
-        <p>Faourites</p>
+        <p onclick="displayEl()">Inbox <span id="totalElements"></span></p>
+        <p onclick="displayFavourites()">
+          Faourites <span id="totalElements"></span>
+        </p>
       </div>
       <div id="container">
         <div>
@@ -34,6 +36,7 @@
           ></i>
         </div>
         <div id="inbox"></div>
+        <div id="favouritesDisplay"></div>
       </div>
       <div id="message-body"></div>
     </div>

@@ -55,6 +55,19 @@
   margin: 1rem 0;
 }
 
+.inbox-elements .favourites {
+  top: 0;
+  float: right;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 0.2px solid black;
+}
+
+.activeFavourites {
+  background-color: red;
+}
+
 .active {
   background-color: #fff;
 }
