@@ -34,8 +34,25 @@
   background: yellow;
   border-radius: 50%;
   color: #000;
-  font-size: 15px;
+  font-size: 10px;
+  padding: 4px 4px 0 3px;
+  text-align: center;
+  font-weight: 500;
 }
+
+#master #left-side :last-child span {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background: yellow;
+  border-radius: 50%;
+  color: #000;
+  font-size: 10px;
+  padding: 4px 4px 0 3px;
+  text-align: center;
+  font-weight: 500;
+}
+
 #master #container {
   width: 30%;
   /* padding-right: 5%; */

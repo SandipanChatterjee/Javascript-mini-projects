@@ -115,6 +115,8 @@ const assignClickEvent = (e) => {
         fav.classList.add("activeFavourites");
         if (this.id === this.parentElement.id) {
           favourites.push(this.parentElement);
+          document.getElementById("totalElementsFavourites").innerHTML =
+            favourites.length;
         }
       } else {
         fav.classList.remove("activeFavourites");
@@ -126,6 +128,7 @@ const assignClickEvent = (e) => {
 
 const displayFavourites = () => {
   document.getElementById("inbox").innerHTML = "";
+
   for (let fav of favourites) {
     console.log(fav.length);
     document.getElementById("favouritesDisplay").append(fav);
@@ -133,6 +136,7 @@ const displayFavourites = () => {
 };
 
 const displayEl = () => {
+  document.getElementById("totalElementsFavourites").innerHTML = 0;
   document.getElementById("favouritesDisplay").innerHTML = "";
   favourites.length = 0;
   document.getElementById("totalElements").innerHTML = messages.length;
