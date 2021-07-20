@@ -1,6 +1,7 @@
 const states = [];
 let filteredStates = [];
 const outputEl = () => {
+  console.log("outputEl()");
   let result = filteredStates.map((state) => {
     return `<div className='states'>
         <p>${state.name} (${state.abbr})</p>
@@ -35,6 +36,7 @@ const memoizedFunction = (fn) => {
 };
 
 const memoizedResult = memoizedFunction(outputEl);
+const outputElHandler = debounce(outputEl);
 
 document.getElementById("input").addEventListener("keyup", function () {
   const val = this.value.toLowerCase();
@@ -45,7 +47,7 @@ document.getElementById("input").addEventListener("keyup", function () {
       return name.startsWith(val);
     });
   }
-  debounce(outputEl)();
+  outputElHandler();
   memoizedResult();
 });
 
